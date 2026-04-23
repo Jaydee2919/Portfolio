@@ -1,15 +1,19 @@
 :root {
-  --bg: #f7f1e8;
-  --bg-soft: rgba(255, 255, 255, 0.58);
-  --surface: rgba(255, 255, 255, 0.72);
-  --surface-strong: #fffaf4;
-  --text: #1d1a16;
-  --muted: #5b534a;
-  --line: rgba(29, 26, 22, 0.1);
-  --accent: #ef6c3e;
-  --accent-deep: #bf4b22;
-  --accent-alt: #0f766e;
-  --shadow: 0 24px 60px rgba(83, 57, 33, 0.12);
+  --bg: #081712;
+  --bg-soft: rgba(244, 235, 219, 0.08);
+  --surface: rgba(250, 244, 232, 0.92);
+  --surface-dark: rgba(13, 35, 28, 0.88);
+  --surface-strong: #fff8eb;
+  --text: #102119;
+  --text-on-dark: #f9f1e4;
+  --muted: #5d6a61;
+  --muted-on-dark: #b9c3ba;
+  --line: rgba(255, 248, 235, 0.16);
+  --line-dark: rgba(16, 33, 25, 0.12);
+  --accent: #f0b35a;
+  --accent-deep: #c76932;
+  --accent-alt: #38b6a3;
+  --shadow: 0 28px 70px rgba(0, 0, 0, 0.22);
   --radius-xl: 32px;
   --radius-lg: 24px;
   --radius-md: 16px;
@@ -27,11 +31,11 @@ html {
 body {
   margin: 0;
   font-family: "Space Grotesk", sans-serif;
-  color: var(--text);
+  color: var(--text-on-dark);
   background:
-    radial-gradient(circle at top left, rgba(239, 108, 62, 0.22), transparent 32%),
-    radial-gradient(circle at 80% 20%, rgba(15, 118, 110, 0.16), transparent 24%),
-    linear-gradient(180deg, #fbf7f0 0%, var(--bg) 100%);
+    radial-gradient(circle at 10% 8%, rgba(240, 179, 90, 0.22), transparent 28%),
+    radial-gradient(circle at 82% 18%, rgba(56, 182, 163, 0.18), transparent 30%),
+    linear-gradient(135deg, #081712 0%, #123329 48%, #0d231c 100%);
   min-height: 100vh;
 }
 
@@ -40,10 +44,10 @@ body::before {
   position: fixed;
   inset: 0;
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.3) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.25) 1px, transparent 1px);
-  background-size: 42px 42px;
-  opacity: 0.32;
+    linear-gradient(rgba(255, 248, 235, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 248, 235, 0.08) 1px, transparent 1px);
+  background-size: 48px 48px;
+  opacity: 0.8;
   pointer-events: none;
   mask-image: linear-gradient(180deg, black 30%, transparent 100%);
 }
@@ -58,11 +62,16 @@ body::before {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.3rem 0;
+  padding: 1rem 1.1rem;
   position: sticky;
-  top: 0;
+  top: 1rem;
   z-index: 10;
   backdrop-filter: blur(18px);
+  background: rgba(8, 23, 18, 0.74);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  margin-top: 1rem;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.16);
 }
 
 .brand,
@@ -86,13 +95,14 @@ body::before {
 }
 
 .nav a {
-  color: var(--muted);
+  color: var(--muted-on-dark);
   transition: color 180ms ease;
 }
 
 .nav a:hover,
 .nav a:focus-visible {
   color: var(--text);
+  color: var(--text-on-dark);
 }
 
 .section {
@@ -101,10 +111,20 @@ body::before {
 
 .hero {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
   gap: 2rem;
-  align-items: end;
-  padding-top: 4.5rem;
+  align-items: stretch;
+  padding: 4.5rem 0 3rem;
+}
+
+.hero-copy {
+  padding: clamp(1.4rem, 4vw, 3rem);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-xl);
+  background:
+    linear-gradient(135deg, rgba(255, 248, 235, 0.1), rgba(255, 248, 235, 0.03)),
+    rgba(8, 23, 18, 0.54);
+  box-shadow: var(--shadow);
 }
 
 .eyebrow {
@@ -129,14 +149,14 @@ body::before {
   display: block;
   font-family: "Instrument Serif", serif;
   font-style: italic;
-  color: var(--accent-deep);
+  color: var(--accent);
   font-weight: 400;
 }
 
 .hero-text,
 .project-card p,
 .service-card p,
-.about-copy p,
+.expertise-card p,
 .timeline-item p,
 .contact-section p {
   color: var(--muted);
@@ -144,9 +164,17 @@ body::before {
   font-size: 1rem;
 }
 
+.about-copy p {
+  color: var(--muted-on-dark);
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
 .hero-text {
   max-width: 42rem;
   margin-top: 1.5rem;
+  color: var(--muted-on-dark);
+  font-size: 1.08rem;
 }
 
 .hero-actions,
@@ -177,14 +205,15 @@ body::before {
 }
 
 .button-primary {
-  background: var(--text);
-  color: #fff7ef;
-  box-shadow: 0 14px 30px rgba(29, 26, 22, 0.18);
+  background: var(--accent);
+  color: #172118;
+  box-shadow: 0 14px 30px rgba(240, 179, 90, 0.22);
 }
 
 .button-secondary {
   border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 248, 235, 0.08);
+  color: var(--text-on-dark);
 }
 
 .hero-card,
@@ -195,6 +224,7 @@ body::before {
 .metrics,
 .timeline {
   background: var(--surface);
+  color: var(--text);
   border: 1px solid rgba(255, 255, 255, 0.55);
   box-shadow: var(--shadow);
   backdrop-filter: blur(20px);
@@ -202,8 +232,12 @@ body::before {
 
 .hero-card {
   border-radius: var(--radius-xl);
-  padding: 1.3rem;
+  padding: 1.15rem;
   overflow: hidden;
+  background:
+    linear-gradient(160deg, rgba(250, 244, 232, 0.96), rgba(236, 219, 194, 0.9)),
+    var(--surface);
+  color: var(--text);
 }
 
 .status-pill {
@@ -254,11 +288,15 @@ body::before {
   gap: 1rem;
   padding: 1.5rem;
   border-radius: var(--radius-xl);
+  color: var(--text);
+  background:
+    linear-gradient(135deg, rgba(255, 248, 235, 0.98), rgba(240, 179, 90, 0.16)),
+    var(--surface);
 }
 
 .metric {
   padding: 1rem;
-  border-right: 1px solid var(--line);
+  border-right: 1px solid var(--line-dark);
 }
 
 .metric:last-child {
@@ -285,7 +323,45 @@ body::before {
 
 .section-heading h2 {
   font-size: clamp(2.2rem, 5vw, 4.5rem);
-  max-width: 14ch;
+  max-width: 15ch;
+  color: var(--text-on-dark);
+}
+
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.expertise-card {
+  min-height: 260px;
+  padding: 1.35rem;
+  border-radius: var(--radius-lg);
+  background:
+    linear-gradient(180deg, rgba(255, 248, 235, 0.95), rgba(245, 231, 206, 0.9)),
+    var(--surface);
+  color: var(--text);
+  border: 1px solid rgba(16, 33, 25, 0.08);
+  box-shadow: var(--shadow);
+}
+
+.expertise-card span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.35rem;
+  height: 2.35rem;
+  border-radius: 50%;
+  background: #102119;
+  color: var(--accent);
+  font-weight: 700;
+  margin-bottom: 1.6rem;
+}
+
+.expertise-card h3 {
+  margin: 0 0 0.7rem;
+  font-size: 1.55rem;
+  line-height: 1.05;
 }
 
 .project-grid,
@@ -303,6 +379,8 @@ body::before {
 .service-card {
   padding: 1.5rem;
   border-radius: var(--radius-lg);
+  color: var(--text);
+  border-color: rgba(16, 33, 25, 0.08);
 }
 
 .tag-row {
@@ -317,7 +395,7 @@ body::before {
 .tag-row li {
   padding: 0.4rem 0.8rem;
   border-radius: 999px;
-  border: 1px solid var(--line);
+  border: 1px solid var(--line-dark);
   font-size: 0.86rem;
   color: var(--muted);
 }
@@ -342,6 +420,13 @@ body::before {
   padding-right: 1.5rem;
 }
 
+.about-copy .button-secondary,
+.contact-section .button-secondary {
+  color: var(--text);
+  border-color: var(--line-dark);
+  background: rgba(255, 255, 255, 0.54);
+}
+
 .timeline {
   padding: 1rem;
   border-radius: var(--radius-xl);
@@ -352,7 +437,7 @@ body::before {
   grid-template-columns: 115px 1fr;
   gap: 1rem;
   padding: 1rem 0;
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid var(--line-dark);
 }
 
 .timeline-item:last-child {
@@ -371,6 +456,10 @@ body::before {
 .quote-section {
   border-radius: var(--radius-xl);
   padding: 2rem;
+  color: var(--text);
+  background:
+    linear-gradient(135deg, rgba(240, 179, 90, 0.28), rgba(255, 248, 235, 0.96)),
+    var(--surface);
 }
 
 .quote-section blockquote {
@@ -387,10 +476,18 @@ body::before {
   color: var(--muted);
 }
 
+.contact-section p {
+  color: var(--muted);
+}
+
 .contact-section {
   padding: 2.5rem;
   border-radius: var(--radius-xl);
   margin-bottom: 3rem;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 90% 20%, rgba(56, 182, 163, 0.18), transparent 35%),
+    var(--surface-strong);
 }
 
 .contact-section h2 {
@@ -402,7 +499,7 @@ body::before {
   display: flex;
   justify-content: space-between;
   padding: 0 0 2rem;
-  color: var(--muted);
+  color: rgba(255, 248, 235, 0.72);
 }
 
 .reveal {
@@ -422,6 +519,7 @@ body::before {
   .hero,
   .project-grid,
   .service-grid,
+  .expertise-grid,
   .about-layout,
   .metrics {
     grid-template-columns: 1fr;
@@ -429,7 +527,7 @@ body::before {
 
   .metric {
     border-right: 0;
-    border-bottom: 1px solid var(--line);
+    border-bottom: 1px solid var(--line-dark);
   }
 
   .metric:last-child {
@@ -450,6 +548,7 @@ body::before {
     flex-direction: column;
     gap: 0.9rem;
     align-items: flex-start;
+    border-radius: 26px;
   }
 
   .nav {
@@ -477,7 +576,8 @@ body::before {
   .contact-section,
   .timeline,
   .project-card,
-  .service-card {
+  .service-card,
+  .expertise-card {
     border-radius: 22px;
   }
 
