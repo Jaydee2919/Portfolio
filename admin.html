@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website Content Editor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body>
+    <header class="admin-top">
+      <div>
+        <p class="admin-kicker">Website editor</p>
+        <h1>Content manager</h1>
+      </div>
+      <div class="admin-actions">
+        <button id="open-file" type="button">Open content.js</button>
+        <button id="save-file" type="button" class="primary">Save content.js</button>
+        <button id="download-file" type="button">Download content.js</button>
+        <a href="index.html" target="_blank" rel="noreferrer">Preview site</a>
+      </div>
+    </header>
+
+    <div class="admin-status" id="status" role="status">Ready</div>
+
+    <main class="admin-layout">
+      <aside class="admin-side" aria-label="Editor sections">
+        <a href="#site-panel">Site</a>
+        <a href="#sections-panel">Sections</a>
+        <a href="#hero-panel">Hero</a>
+        <a href="#highlights-panel">Highlights</a>
+        <a href="#expertise-panel">Expertise</a>
+        <a href="#projects-panel">Projects</a>
+        <a href="#post-panel">LinkedIn post</a>
+        <a href="#about-panel">About</a>
+        <a href="#proof-panel">Proof</a>
+        <a href="#custom-panel">Custom</a>
+        <a href="#contact-panel">Contact</a>
+      </aside>
+
+      <form class="editor" id="editor"></form>
+    </main>
+
+    <script src="content.js"></script>
+    <script src="admin.js"></script>
+  </body>
+</html>

@@ -97,19 +97,19 @@ a {
 }
 
 .hero {
-  min-height: 620px;
+  min-height: auto;
   display: grid;
   grid-template-columns: minmax(0, 1fr) 360px;
   gap: 56px;
-  align-items: end;
-  padding: 70px 0 54px;
+  align-items: start;
+  padding: 28px 0 48px;
 }
 
 .hero::after {
   content: "BFSI";
   position: absolute;
   right: 0;
-  top: 22px;
+  top: 0;
   color: rgba(0, 140, 137, 0.09);
   font-family: "Instrument Serif", serif;
   font-size: 172px;
@@ -137,18 +137,25 @@ p {
 
 h1 {
   max-width: 760px;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
   font-family: "Instrument Serif", serif;
-  font-size: 104px;
+  font-size: 78px;
   font-weight: 400;
-  line-height: 0.95;
+  line-height: 1;
 }
 
 .hero-lede {
   max-width: 720px;
   color: #2e352f;
-  font-size: 21px;
+  font-size: 20px;
   line-height: 1.6;
+}
+
+.hero-note {
+  max-width: 720px;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.65;
 }
 
 .hero-actions,
@@ -477,7 +484,7 @@ h1 {
   }
 
   h1 {
-    font-size: 76px;
+    font-size: 62px;
   }
 
   .impact-grid,
@@ -523,10 +530,11 @@ h1 {
   }
 
   h1 {
-    font-size: 54px;
+    font-size: 42px;
   }
 
   .hero-lede,
+  .hero-note,
   .post-copy p,
   .about-copy p {
     font-size: 17px;
