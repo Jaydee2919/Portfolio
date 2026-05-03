@@ -19,33 +19,71 @@ window.siteContent = {
     "contact": true
   },
   "nav": [
-    { "label": "Highlights", "href": "#highlights", "section": "highlights" },
-    { "label": "Expertise", "href": "#expertise", "section": "expertise" },
-    { "label": "Projects", "href": "#projects", "section": "projects" },
-    { "label": "Post", "href": "#post", "section": "post" },
-    { "label": "Contact", "href": "#contact", "section": "contact" }
+    {
+      "label": "Highlights",
+      "href": "#highlights",
+      "section": "highlights"
+    },
+    {
+      "label": "Expertise",
+      "href": "#expertise",
+      "section": "expertise"
+    },
+    {
+      "label": "Projects",
+      "href": "#projects",
+      "section": "projects"
+    },
+    {
+      "label": "Post",
+      "href": "#post",
+      "section": "post"
+    },
+    {
+      "label": "Contact",
+      "href": "#contact",
+      "section": "contact"
+    }
   ],
   "hero": {
     "eyebrow": "Cards and payments SME / Product and project leader",
     "headline": "Lead: Process Excellence and Automation",
     "paragraphs": [
-      "My work sits at the intersection of cards, payments, digital banking, automation, customer experience, and cross-functional delivery. I translate business priorities into launch-ready journeys that move through policy, compliance, risk, technology, operations, and customer adoption with clarity.",
+      "With 11+ years of experience my work sits at the intersection of cards, payments, digital banking, automation, customer experience, and cross-functional delivery. I translate business priorities into launch-ready journeys that move through policy, compliance, risk, technology, operations, and customer adoption with clarity.",
       "Across Axis Bank, HDFC Bank and earlier commercial roles, I have led initiatives spanning onboarding, servicing, revenue growth, strategic partnerships, product innovation, and stakeholder-heavy change programs."
     ],
     "actions": [
-      { "label": "Connect with me", "href": "#contact", "style": "primary" },
-      { "label": "View project proof", "href": "#projects", "style": "secondary" }
+      {
+        "label": "Connect with me",
+        "href": "#contact",
+        "style": "primary"
+      },
+      {
+        "label": "View project proof",
+        "href": "#projects",
+        "style": "secondary"
+      }
     ],
     "facts": [
+      {
+        "label": "Core domain",
+        "title": "Cards, payments, CX, automation",
+        "body": "Product launches, journey orchestration, stakeholder-led delivery"
+      },
       {
         "label": "Current role",
         "title": "Lead: Process Excellence and Automation",
         "body": "Axis Bank, Mumbai"
       },
       {
-        "label": "Core domain",
-        "title": "Cards, payments, CX, automation",
-        "body": "Product launches, journey orchestration, stakeholder-led delivery"
+        "label": "Past Experience",
+        "title": "",
+        "body": "HDFC Bank, ICICI Prudential, Markets & Markets Research"
+      },
+      {
+        "label": "Overseas Exposure",
+        "title": "",
+        "body": "Redington Gulf , Dubai , Oman and Bahrain"
       }
     ]
   },
@@ -163,11 +201,7 @@ window.siteContent = {
   "about": {
     "eyebrow": "About",
     "title": "A product and transformation leader turning banking priorities into launch-ready customer journeys.",
-    "body": [
-      "I bring 11+ years of experience across BFSI, digital product, cards and payments, customer experience, process automation, and commercial growth. My work is anchored in converting business intent into clear journeys that can move from concept to launch with stakeholder confidence.",
-      "At Axis Bank, I work as Lead: Process Excellence and Automation, acting as an internal strategic partner for cards and payments. I lead 0-to-1 product and portfolio journeys, shape business requirements, align policy and compliance inputs, coordinate UAT and CUG readiness, and drive go-live execution with cross-functional teams.",
-      "My approach blends product ownership, journey orchestration, customer-first design, and techno-commercial judgment. I am especially focused on scalable digital journeys that improve adoption, reduce operational friction, increase containment, and create measurable revenue impact."
-    ],
+    "body": [],
     "points": [
       {
         "title": "What I lead",
@@ -204,9 +238,22 @@ window.siteContent = {
     "eyebrow": "Contact",
     "title": "Let’s connect on cards, payments, and digital transformation.",
     "actions": [
-      { "label": "jayant.db91@gmail.com", "href": "mailto:jayant.db91@gmail.com", "style": "primary" },
-      { "label": "+91 90732 34046", "href": "tel:+919073234046", "style": "secondary" },
-      { "label": "LinkedIn", "href": "https://www.linkedin.com/in/jayantaiimk", "style": "secondary", "external": true }
+      {
+        "label": "jayant.db91@gmail.com",
+        "href": "mailto:jayant.db91@gmail.com",
+        "style": "primary"
+      },
+      {
+        "label": "+91 90732 34046",
+        "href": "tel:+919073234046",
+        "style": "secondary"
+      },
+      {
+        "label": "LinkedIn",
+        "href": "https://www.linkedin.com/in/jayantaiimk",
+        "style": "secondary",
+        "external": true
+      }
     ]
   }
 };
