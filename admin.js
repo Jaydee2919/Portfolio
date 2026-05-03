@@ -15,7 +15,7 @@
     expertise: "Expertise",
     projects: "Projects",
     post: "LinkedIn post",
-    about: "About timeline",
+    about: "About",
     proof: "Proof blocks",
     contact: "Contact",
   };
@@ -304,18 +304,20 @@
   }
 
   function renderAboutPanel() {
-    const body = panel("about-panel", "About", "Timeline rows can be added, removed, and reordered.");
+    const body = panel("about-panel", "About", "This section now appears directly below the top section. Use paragraphs for the main story and cards for supporting points.");
+    const aboutBody = Array.isArray(content.about.body) ? content.about.body.join("\n\n") : content.about.body;
     body.append(
       fieldGrid(
         inputField("Eyebrow", content.about.eyebrow, (value) => (content.about.eyebrow = value)),
         inputField("Title", content.about.title, (value) => (content.about.title = value), { full: true, multiline: true }),
-        inputField("Body", content.about.body, (value) => (content.about.body = value), { full: true, multiline: true })
+        inputField("Body paragraphs", aboutBody, (value) => (content.about.body = value.split(/\n\s*\n/).filter(Boolean)), { full: true, multiline: true })
       )
     );
-    repeater(body, "Timeline row", content.about.timeline, { period: "Year", text: "Timeline detail." }, (itemBody, item) => {
+    if (!content.about.points) content.about.points = [];
+    repeater(body, "About point", content.about.points, { title: "New point", text: "Point detail." }, (itemBody, item) => {
       itemBody.append(
         fieldGrid(
-          inputField("Period", item.period, (value) => (item.period = value)),
+          inputField("Title", item.title, (value) => (item.title = value)),
           inputField("Text", item.text, (value) => (item.text = value), { full: true, multiline: true })
         )
       );

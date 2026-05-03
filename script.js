@@ -182,19 +182,20 @@
     section.id = "about";
     section.append(sectionHeader(data.about));
 
-    const grid = el("div", "about-grid");
+    const grid = el("div", "about-grid about-grid-full");
     const copy = el("div", "about-copy reveal");
-    copy.append(el("p", "", data.about.body));
+    const bodyItems = Array.isArray(data.about.body) ? data.about.body : [data.about.body];
+    bodyItems.filter(Boolean).forEach((paragraph) => copy.append(el("p", "", paragraph)));
 
-    const timeline = el("div", "timeline reveal");
-    (data.about.timeline || []).forEach((item) => {
-      const row = el("div", "timeline-item");
-      row.append(el("span", "", item.period));
-      row.append(el("p", "", item.text));
-      timeline.append(row);
+    const points = el("div", "about-points reveal");
+    (data.about.points || []).forEach((item) => {
+      const point = el("article", "about-point");
+      point.append(el("h3", "", item.title));
+      point.append(el("p", "", item.text));
+      points.append(point);
     });
 
-    grid.append(copy, timeline);
+    grid.append(copy, points);
     section.append(grid);
     main.append(section);
   }
@@ -283,11 +284,11 @@
 
   renderHeader();
   renderHero();
+  renderAbout();
   renderHighlights();
   renderExpertise();
   renderProjects();
   renderPost();
-  renderAbout();
   renderProof();
   renderCustomSections();
   renderContact();

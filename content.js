@@ -7,7 +7,7 @@ window.siteContent = {
     "linkedinUrl": "https://www.linkedin.com/in/jayantaiimk",
     "email": "jayant.db91@gmail.com",
     "phone": "+91 90732 34046",
-    "phoneHref": ""
+    "phoneHref": "tel:+919073234046"
   },
   "sections": {
     "highlights": true,
@@ -19,31 +19,11 @@ window.siteContent = {
     "contact": true
   },
   "nav": [
-    {
-      "label": "Highlights",
-      "href": "#highlights",
-      "section": "highlights"
-    },
-    {
-      "label": "Expertise",
-      "href": "#expertise",
-      "section": "expertise"
-    },
-    {
-      "label": "Projects",
-      "href": "#projects",
-      "section": "projects"
-    },
-    {
-      "label": "Post",
-      "href": "#post",
-      "section": "post"
-    },
-    {
-      "label": "Contact",
-      "href": "#contact",
-      "section": "contact"
-    }
+    { "label": "Highlights", "href": "#highlights", "section": "highlights" },
+    { "label": "Expertise", "href": "#expertise", "section": "expertise" },
+    { "label": "Projects", "href": "#projects", "section": "projects" },
+    { "label": "Post", "href": "#post", "section": "post" },
+    { "label": "Contact", "href": "#contact", "section": "contact" }
   ],
   "hero": {
     "eyebrow": "Cards and payments SME / Product and project leader",
@@ -53,37 +33,19 @@ window.siteContent = {
       "Across Axis Bank, HDFC Bank and earlier commercial roles, I have led initiatives spanning onboarding, servicing, revenue growth, strategic partnerships, product innovation, and stakeholder-heavy change programs."
     ],
     "actions": [
-      {
-        "label": "Connect with me",
-        "href": "#contact",
-        "style": "primary"
-      },
-      {
-        "label": "View project proof",
-        "href": "#projects",
-        "style": "secondary"
-      }
+      { "label": "Connect with me", "href": "#contact", "style": "primary" },
+      { "label": "View project proof", "href": "#projects", "style": "secondary" }
     ],
     "facts": [
-      {
-        "label": "Core domain",
-        "title": "Cards, Payments, UPI, CX, Agentic & Gen AI led Automation",
-        "body": ""
-      },
       {
         "label": "Current role",
         "title": "Lead: Process Excellence and Automation",
         "body": "Axis Bank, Mumbai"
       },
       {
-        "label": "Past Roles",
-        "title": "Commercial , Prepaid Cards, Merchant Acquiring, Account Management",
-        "body": "HDFC Bank, ICICI Prudential, Markets & Markets Research"
-      },
-      {
-        "label": "Overseas Exposure",
-        "title": "UAE, Oman , Bahrain",
-        "body": "Redington Gulf"
+        "label": "Core domain",
+        "title": "Cards, payments, CX, automation",
+        "body": "Product launches, journey orchestration, stakeholder-led delivery"
       }
     ]
   },
@@ -145,7 +107,7 @@ window.siteContent = {
     ]
   },
   "projects": {
-    "eyebrow": "Marquee Projects",
+    "eyebrow": "Selected projects",
     "title": "Business-critical journeys shipped across revenue, acquisition, service, and payments innovation.",
     "items": [
       {
@@ -179,7 +141,7 @@ window.siteContent = {
         ]
       },
       {
-        "meta": "Axis Bank / Ecosystem initiative",
+        "meta": "Axis Bank / Strategic payments initiative",
         "title": "Credit on UPI",
         "description": "Leading a $100 Mn credit on UPI initiative to enable EMI on RuPay credit cards across TPAP ecosystems.",
         "bullets": [
@@ -200,20 +162,24 @@ window.siteContent = {
   },
   "about": {
     "eyebrow": "About",
-    "title": "Career timeline across transformation, product leadership, and commercial growth.",
-    "body": "The journey has moved from commercial and partnership-led roles into product ownership, cards transformation, customer experience, and automation-led banking journeys.",
-    "timeline": [
+    "title": "A product and transformation leader turning banking priorities into launch-ready customer journeys.",
+    "body": [
+      "I bring 11+ years of experience across BFSI, digital product, cards and payments, customer experience, process automation, and commercial growth. My work is anchored in converting business intent into clear journeys that can move from concept to launch with stakeholder confidence.",
+      "At Axis Bank, I work as Lead: Process Excellence and Automation, acting as an internal strategic partner for cards and payments. I lead 0-to-1 product and portfolio journeys, shape business requirements, align policy and compliance inputs, coordinate UAT and CUG readiness, and drive go-live execution with cross-functional teams.",
+      "My approach blends product ownership, journey orchestration, customer-first design, and techno-commercial judgment. I am especially focused on scalable digital journeys that improve adoption, reduce operational friction, increase containment, and create measurable revenue impact."
+    ],
+    "points": [
       {
-        "period": "2023-Present",
-        "text": "Axis Bank: Lead, Process Excellence and Automation across cards, payments and CX transformation."
+        "title": "What I lead",
+        "text": "Cards and payments transformation, onboarding journeys, portfolio services, EMI and UPI use cases, AI-led servicing, and process excellence programs."
       },
       {
-        "period": "2019-2023",
-        "text": "HDFC Bank: Senior Product Manager across digital experience, prepaid cards and commercial cards."
+        "title": "How I operate",
+        "text": "I align business, IT, policy, compliance, risk, operations, vendors, and customer feedback into practical execution plans."
       },
       {
-        "period": "2014-2019",
-        "text": "Commercial growth roles across Redington Gulf, MarketsandMarkets and ICICI Prudential Life Insurance."
+        "title": "What I optimize for",
+        "text": "Faster time-to-market, smoother go-lives, stronger customer adoption, revenue growth, and improved service efficiency."
       }
     ]
   },
@@ -238,22 +204,9 @@ window.siteContent = {
     "eyebrow": "Contact",
     "title": "Let’s connect on cards, payments, and digital transformation.",
     "actions": [
-      {
-        "label": "jayant.db91@gmail.com",
-        "href": "mailto:jayant.db91@gmail.com",
-        "style": "primary"
-      },
-      {
-        "label": "+91 90732 34046",
-        "href": "tel:+919073234046",
-        "style": "secondary"
-      },
-      {
-        "label": "LinkedIn",
-        "href": "https://www.linkedin.com/in/jayantaiimk",
-        "style": "secondary",
-        "external": true
-      }
+      { "label": "jayant.db91@gmail.com", "href": "mailto:jayant.db91@gmail.com", "style": "primary" },
+      { "label": "+91 90732 34046", "href": "tel:+919073234046", "style": "secondary" },
+      { "label": "LinkedIn", "href": "https://www.linkedin.com/in/jayantaiimk", "style": "secondary", "external": true }
     ]
   }
 };

@@ -287,7 +287,7 @@ h1 {
 .project-item li,
 .post-copy p,
 .about-copy p,
-.timeline-item p,
+.about-point p,
 .proof-item p,
 .contact-section p {
   color: var(--muted);
@@ -392,27 +392,35 @@ h1 {
 
 .about-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 420px;
-  gap: 48px;
+  gap: 28px;
+}
+
+.about-grid-full {
+  grid-template-columns: minmax(0, 1fr);
 }
 
 .about-copy p {
   font-size: 18px;
+  max-width: 980px;
 }
 
-.timeline {
-  border-top: 3px solid var(--coral);
+.about-points {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
-.timeline-item {
-  padding: 22px 0;
-  border-bottom: 1px solid var(--line);
+.about-point {
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.72);
 }
 
-.timeline-item span {
-  display: block;
-  margin-bottom: 8px;
+.about-point h3 {
+  margin-bottom: 10px;
   color: var(--coral);
+  font-size: 20px;
   font-weight: 800;
 }
 
@@ -489,6 +497,7 @@ h1 {
 
   .impact-grid,
   .project-list,
+  .about-points,
   .proof-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -551,6 +560,7 @@ h1 {
 
   .impact-grid,
   .project-list,
+  .about-points,
   .proof-grid {
     grid-template-columns: 1fr;
   }
