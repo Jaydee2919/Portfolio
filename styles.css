@@ -363,7 +363,7 @@ h1 {
 
 .post-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(320px, 504px);
+  grid-template-columns: minmax(0, 0.85fr) minmax(360px, 1fr);
   gap: 44px;
   align-items: start;
 }
@@ -380,15 +380,14 @@ h1 {
 .linkedin-card-grid {
   display: grid;
   gap: 14px;
-  margin-top: 26px;
 }
 
 .linkedin-card {
   display: grid;
-  grid-template-columns: 118px 1fr;
-  gap: 16px;
+  grid-template-columns: 150px 1fr;
+  gap: 20px;
   align-items: stretch;
-  min-height: 96px;
+  min-height: 126px;
   color: #ffffff;
   text-decoration: none;
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -415,7 +414,7 @@ h1 {
     radial-gradient(circle at top left, rgba(0, 140, 137, 0.34), transparent 44%);
   background-size: cover;
   background-position: center;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 800;
   text-align: center;
   text-transform: uppercase;
@@ -433,28 +432,14 @@ h1 {
 }
 
 .linkedin-card-body strong {
-  font-size: 17px;
+  font-size: 21px;
   line-height: 1.25;
 }
 
 .linkedin-card-body small {
   color: rgba(255, 255, 255, 0.68);
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.45;
-}
-
-.post-frame {
-  overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.28);
-  border-radius: 8px;
-  background: #ffffff;
-}
-
-.post-frame iframe {
-  display: block;
-  width: 100%;
-  max-width: 504px;
-  margin: 0 auto;
 }
 
 .about-grid {
@@ -664,10 +649,6 @@ h1 {
 
   .linkedin-post-section {
     padding: 54px 12px;
-  }
-
-  .post-frame iframe {
-    height: 560px;
   }
 
   .contact-section {

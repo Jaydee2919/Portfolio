@@ -163,42 +163,29 @@
     copy.append(el("p", "", data.post.description));
     copy.append(button({ label: data.post.ctaLabel, href: data.post.ctaUrl, style: "primary", external: true }));
 
-    if (Array.isArray(data.post.cards) && data.post.cards.length) {
-      const cards = el("div", "linkedin-card-grid");
-      data.post.cards.forEach((item) => {
-        const card = el("a", "linkedin-card");
-        card.href = item.url;
-        card.target = "_blank";
-        card.rel = "noopener noreferrer";
+    const cards = el("div", "linkedin-card-grid reveal");
+    (data.post.cards || []).forEach((item) => {
+      const card = el("a", "linkedin-card");
+      card.href = item.url;
+      card.target = "_blank";
+      card.rel = "noopener noreferrer";
 
-        const thumb = el("span", "linkedin-card-thumb");
-        if (item.image) {
-          thumb.style.backgroundImage = `url("${item.image}")`;
-          thumb.classList.add("has-image");
-        } else {
-          thumb.textContent = item.thumbnailText || "LinkedIn";
-        }
+      const thumb = el("span", "linkedin-card-thumb");
+      if (item.image) {
+        thumb.style.backgroundImage = `url("${item.image}")`;
+        thumb.classList.add("has-image");
+      } else {
+        thumb.textContent = item.thumbnailText || "LinkedIn";
+      }
 
-        const body = el("span", "linkedin-card-body");
-        body.append(el("strong", "", item.title));
-        body.append(el("small", "", item.summary));
-        card.append(thumb, body);
-        cards.append(card);
-      });
-      copy.append(cards);
-    }
+      const body = el("span", "linkedin-card-body");
+      body.append(el("strong", "", item.title));
+      body.append(el("small", "", item.summary));
+      card.append(thumb, body);
+      cards.append(card);
+    });
 
-    const frame = el("div", "post-frame reveal");
-    const iframe = el("iframe");
-    iframe.src = data.post.embedUrl;
-    iframe.height = "601";
-    iframe.width = "504";
-    iframe.frameBorder = "0";
-    iframe.allowFullscreen = true;
-    iframe.title = "Embedded LinkedIn post";
-    frame.append(iframe);
-
-    layout.append(copy, frame);
+    layout.append(copy, cards);
     section.append(layout);
     main.append(section);
   }
