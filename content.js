@@ -196,7 +196,23 @@ window.siteContent = {
     "description": "This featured post is embedded directly from LinkedIn, so visitors can engage with the original update and continue to my profile for more current activity.",
     "ctaLabel": "Follow on LinkedIn",
     "ctaUrl": "https://www.linkedin.com/in/jayantaiimk",
-    "embedUrl": "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7453711939156774913?collapsed=1"
+    "embedUrl": "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7453711939156774913?collapsed=1",
+    "cards": [
+      {
+        "title": "Featured LinkedIn update",
+        "summary": "A selected professional update from my LinkedIn activity.",
+        "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7453711939156774913/",
+        "image": "",
+        "thumbnailText": "LinkedIn Post"
+      },
+      {
+        "title": "More posts and articles",
+        "summary": "Visit my LinkedIn profile for recent articles, posts, and professional updates.",
+        "url": "https://www.linkedin.com/in/jayantaiimk/recent-activity/all/",
+        "image": "",
+        "thumbnailText": "Recent Activity"
+      }
+    ]
   },
   "about": {
     "eyebrow": "About",

@@ -301,6 +301,18 @@
         inputField("Embed URL", content.post.embedUrl, (value) => (content.post.embedUrl = value), { full: true })
       )
     );
+    content.post.cards ||= [];
+    repeater(body, "LinkedIn card", content.post.cards, { title: "New LinkedIn post", summary: "Short description.", url: "https://www.linkedin.com/in/jayantaiimk/recent-activity/all/", image: "", thumbnailText: "LinkedIn" }, (itemBody, item) => {
+      itemBody.append(
+        fieldGrid(
+          inputField("Title", item.title, (value) => (item.title = value)),
+          inputField("URL", item.url, (value) => (item.url = value)),
+          inputField("Thumbnail image path", item.image || "", (value) => (item.image = value), { full: true }),
+          inputField("Thumbnail text", item.thumbnailText || "", (value) => (item.thumbnailText = value)),
+          inputField("Summary", item.summary, (value) => (item.summary = value), { full: true, multiline: true })
+        )
+      );
+    });
   }
 
   function renderAboutPanel() {

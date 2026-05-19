@@ -376,6 +376,72 @@ h1 {
   font-size: 19px;
 }
 
+.linkedin-card-grid {
+  display: grid;
+  gap: 14px;
+  margin-top: 26px;
+}
+
+.linkedin-card {
+  display: grid;
+  grid-template-columns: 118px 1fr;
+  gap: 16px;
+  align-items: stretch;
+  min-height: 96px;
+  color: #ffffff;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 14px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.08);
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+.linkedin-card:hover,
+.linkedin-card:focus-visible {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.48);
+  background: rgba(255, 255, 255, 0.13);
+}
+
+.linkedin-card-thumb {
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  color: var(--deep);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.94), rgba(213, 162, 41, 0.9)),
+    radial-gradient(circle at top left, rgba(0, 140, 137, 0.34), transparent 44%);
+  background-size: cover;
+  background-position: center;
+  font-size: 13px;
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.linkedin-card-thumb.has-image {
+  color: transparent;
+}
+
+.linkedin-card-body {
+  display: grid;
+  align-content: center;
+  gap: 8px;
+  padding: 16px 18px 16px 0;
+}
+
+.linkedin-card-body strong {
+  font-size: 17px;
+  line-height: 1.25;
+}
+
+.linkedin-card-body small {
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
 .post-frame {
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.28);
